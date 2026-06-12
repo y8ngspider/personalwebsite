@@ -1,4 +1,4 @@
-import { Experience } from '../types'
+import type { Experience } from '../types'
 
 export const experiences: Experience[] = [
   {
@@ -53,18 +53,5 @@ export const experiences: Experience[] = [
       'Led battalion-level events for 300+ soldiers as part of the Military Police Command',
     ],
     type: 'Military',
-  },
-  {
-    id: 'morningside',
-    role: 'Case Team Leader',
-    company: 'Columbia × Morningside Investments Stock Pitch',
-    location: 'New York, NY',
-    startDate: 'Oct 2024',
-    endDate: 'Nov 2024',
-    bullets: [
-      'Won 1st place (Gold Medal) pitching S&P Global with investment theses on recurring revenue, pricing power, and FCF conversion',
-      'Presented to judges from Discerene Group and MayTech Global',
-    ],
-    type: 'Leadership',
   },
 ]
