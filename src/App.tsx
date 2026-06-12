@@ -4,6 +4,8 @@ import Hero from './components/sections/Hero'
 import About from './components/sections/About'
 import Experience from './components/sections/Experience'
 import Projects from './components/sections/Projects'
+import Skills from './components/sections/Skills'
+import Blog from './components/sections/Blog'
 
 export default function App() {
   return (
@@ -14,12 +16,8 @@ export default function App() {
         <About />
         <Experience />
         <Projects />
-        <section id="skills" className="py-20 border-b border-gray-100">
-          <p className="text-gray-400 text-sm">Skills — coming soon</p>
-        </section>
-        <section id="blog" className="py-20">
-          <p className="text-gray-400 text-sm">Blog — coming soon</p>
-        </section>
+        <Skills />
+        <Blog />
       </main>
       <Footer />
     </div>

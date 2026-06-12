@@ -37,7 +37,7 @@ export default function Hero() {
               LeetCode
             </a>
             <a
-              href="mailto:ethan.yang@columbia.edu"
+              href="mailto:ethan.yang.wei.jie@gmail.com"
               className="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:border-gray-500 transition-colors"
             >
               Email
@@ -56,7 +56,7 @@ export default function Hero() {
           <img
             src={ethanPhoto}
             alt="Ethan Yang"
-            className="w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover object-top"
+            className="w-40 h-40 sm:w-60 sm:h-60 rounded-full object-cover object-top"
           />
         </div>
       </div>
