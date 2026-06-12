@@ -11,10 +11,6 @@ export default function Hero() {
           <h1 className="text-5xl font-bold text-gray-900 tracking-tight mb-6">
             Ethan Yang
           </h1>
-          <p className="text-lg text-gray-500 max-w-xl mb-10">
-            Software engineer and finance researcher. I like building tools that sit at the
-            intersection of code and capital.
-          </p>
           <div className="flex flex-wrap gap-3 text-sm">
             <a
               href="https://github.com/y8ngspider"
