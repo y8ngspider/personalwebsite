@@ -14,7 +14,7 @@ export default function About() {
           I've worked across both technical and financial roles. I built Python
           automation tools at a software company, interned at a boutique investment bank, and
           most recently doing equity research at a hedge fund where I build financial models,
-          write investment memos, and automate parts of the workflow in Python.
+          write investment memos, and automate parts of the workflow with Python/JS.
         </p>
         <p>
           I'm drawn to roles where technical ability and business judgment overlap. Outside of
