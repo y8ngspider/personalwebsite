@@ -6,19 +6,20 @@ export default function Hero() {
     <section id="hero" className="border border-stone-200 bg-white/50 rounded-xl p-8 sm:p-10">
       <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-10">
         <div>
-          <p className="text-sm text-clay font-medium mb-3 tracking-wide uppercase">
+          <p className="text-xs text-clay font-medium mb-4 tracking-[0.2em] uppercase">
             CS & Financial Economics @ Columbia
           </p>
-          <h1 className="text-5xl font-semibold text-ink tracking-tight mb-6">
+          <h1 className="text-6xl font-semibold text-ink tracking-tight leading-none mb-5">
             Ethan Yang
           </h1>
-          
-          <div className="flex flex-wrap gap-3 text-sm">
+          <div className="w-10 h-px bg-clay/60 mb-6" />
+
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-stone-500">
             <a
               href="https://github.com/y8ngspider"
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 bg-ink text-cream rounded-md hover:bg-clay transition-colors"
+              className="hover:text-clay transition-colors"
             >
               GitHub
             </a>
@@ -26,7 +27,7 @@ export default function Hero() {
               href="https://linkedin.com/in/ethanyangwj"
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 border border-stone-300 text-stone-700 rounded-md hover:border-clay hover:text-clay transition-colors"
+              className="hover:text-clay transition-colors"
             >
               LinkedIn
             </a>
@@ -34,13 +35,13 @@ export default function Hero() {
               href="https://leetcode.com/u/y8ng/"
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 border border-stone-300 text-stone-700 rounded-md hover:border-clay hover:text-clay transition-colors"
+              className="hover:text-clay transition-colors"
             >
               LeetCode
             </a>
             <a
               href="mailto:ethan.yang.wei.jie@gmail.com"
-              className="px-4 py-2 border border-stone-300 text-stone-700 rounded-md hover:border-clay hover:text-clay transition-colors"
+              className="hover:text-clay transition-colors"
             >
               Email
             </a>
@@ -48,9 +49,9 @@ export default function Hero() {
               href="/resume.pdf"
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2 border border-stone-300 text-stone-700 rounded-md hover:border-clay hover:text-clay transition-colors"
+              className="text-ink font-medium underline decoration-clay/40 underline-offset-4 hover:decoration-clay transition-colors"
             >
-              Resume
+              Résumé ↗
             </a>
           </div>
         </div>
@@ -58,10 +59,9 @@ export default function Hero() {
           <img
             src={ethanPhoto}
             alt="Ethan Yang"
-            className="w-40 h-40 sm:w-60 sm:h-60 rounded-full object-cover object-top"
+            className="w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover object-top ring-1 ring-stone-200"
           />
         </div>
-        
       </div>
       <div
         id="about"

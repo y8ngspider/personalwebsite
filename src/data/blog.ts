@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Automating Finance Work with Python',
     date: 'May 2026',
     description:
-      'What I learned building equity tracking tools at a hedge fund — REST APIs, openpyxl, and scheduled jobs.',
+      'What I learned building tools at a hedge fund',
     content: [
       'At the hedge fund I noticed analysts manually inputting earnings dates into spreadsheets every morning. I built a JavaScript tool to do it automatically.',
       'With Google\'s AppScript function, I wrote a JS script that used a free API - AlphaVantage to pull and update upcoming earnings dates, forward P/E and PEG amongst other data, automating the work such that everyone could see a dashboard that was updated every morning on Google Sheets.'

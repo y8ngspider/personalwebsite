@@ -130,7 +130,7 @@ export default function ChessPage() {
 
       <h1 className="text-3xl font-semibold text-ink tracking-tight mt-6 mb-2">Chess</h1>
       <p className="text-stone-500 mb-8">
-        I picked up chess recently and have been playing on chess.com. Live stats below.{' '}
+        I picked up chess in sophomore year and have been playing on chess.com. See the live stats below.{' '}
         <a
           href={`https://www.chess.com/member/${CHESS_USERNAME}`}
           target="_blank"

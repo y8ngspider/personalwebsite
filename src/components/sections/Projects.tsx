@@ -13,31 +13,38 @@ export default function Projects() {
       : projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section id="projects" className="border border-stone-200 bg-white/50 rounded-xl p-8 sm:p-10">
-      <h2 className="text-xs font-semibold text-clay tracking-widest uppercase mb-8">
-        Projects
-      </h2>
+    <section
+      id="projects"
+      className="border border-stone-200 bg-white/50 rounded-xl p-8 sm:p-10 scroll-mt-24"
+    >
+      <div className="grid gap-6 sm:grid-cols-[140px_1fr] sm:gap-10">
+        <h2 className="text-xs font-semibold text-clay tracking-widest uppercase sm:pt-1">
+          Projects
+        </h2>
 
-      <div className="flex gap-2 mb-8">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={
-              activeCategory === category
-                ? 'px-3 py-1.5 text-sm rounded-md bg-clay text-cream'
-                : 'px-3 py-1.5 text-sm rounded-md border border-stone-300 text-stone-600 hover:border-clay hover:text-clay transition-colors'
-            }
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+        <div>
+          <div className="flex gap-2 mb-6">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={
+                  activeCategory === category
+                    ? 'px-3 py-1.5 text-sm rounded-md bg-clay text-cream'
+                    : 'px-3 py-1.5 text-sm rounded-md border border-stone-300 text-stone-600 hover:border-clay hover:text-clay transition-colors'
+                }
+              >
+                {category}
+              </button>
+            ))}
+          </div>
 
-      <div className="grid sm:grid-cols-2 gap-5">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+          <div className="grid sm:grid-cols-2 gap-5">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
