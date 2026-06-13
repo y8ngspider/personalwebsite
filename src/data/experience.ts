@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
   },
   {
     id: 'lxl-capital',
-    role: 'Investment Banking Analyst Intern',
+    role: 'Investment Banking Intern',
     company: 'LXL Capital',
     startDate: 'Jul 2025',
     endDate: 'Oct 2025',

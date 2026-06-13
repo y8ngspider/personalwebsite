@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import ethanPhoto from '../../assets/ethan.jpg'
 
 export default function Hero() {
@@ -77,7 +78,11 @@ export default function Hero() {
           as a Lieutenant. 
         </p>
         <p>
-          Outside of work, I love watching Formula One, playing tennis, and I recently picked up <a href='https://ethanyangwj.com/interests/chess'>Chess</a> (always down for a game!)
+          Outside of work, I love watching Formula One, playing tennis, and I recently picked up{' '}
+          <Link to="/interests/chess" className="text-clay underline hover:text-ink transition-colors">
+            chess
+          </Link>{' '}
+          (always down for a game!)
         </p>
       </div>
     </section>
