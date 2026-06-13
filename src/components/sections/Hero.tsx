@@ -119,9 +119,9 @@ export default function Hero() {
         <p>
           Outside of work, I love watching Formula One, playing tennis, and I recently picked up{' '}
           <Link to="/interests/chess" className="text-clay underline hover:text-ink transition-colors">
-            chess.
+            chess
           </Link>{' '}
-          (always down for a game!)
+          (always down for a game!).
         </p>
       </div>
     </section>

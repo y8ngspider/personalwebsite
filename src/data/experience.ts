@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
   },
   {
     id: 'saf',
-    role: 'Lieutenant, Infantry Officer',
+    role: 'Lieutenant',
     company: 'Singapore Armed Forces',
     startDate: 'Mar 2022',
     endDate: 'Jan 2024',

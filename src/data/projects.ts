@@ -3,9 +3,9 @@ import type { Project } from '../types'
 export const projects: Project[] = [
   {
     id: 'f1-app',
-    title: 'F1 Driver Profile Web App',
+    title: 'F1 Driver Profiles',
     description:
-      'Full-stack CRUD application in Flask with 6 routes serving dynamically rendered pages for a database of F1 driver profiles, career statistics, and team histories. Includes server-side search with regex matching, async add/edit forms via jQuery AJAX, and client- and server-side validation.',
+      'Full-stack application in Flask serving as a database of F1 driver profiles, career statistics, and team histories.',
     techStack: ['Python', 'Flask', 'Jinja2', 'jQuery', 'AJAX', 'Bootstrap'],
     category: 'SWE',
     githubUrl: 'https://github.com/y8ngspider/f1-driver-profiles',
