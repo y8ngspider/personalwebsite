@@ -23,7 +23,7 @@ interface GameSummary {
 }
 
 // only chart rating history from this date onward (Unix seconds)
-const HISTORY_START = new Date('2025-01-01').getTime() / 1000
+const HISTORY_START = new Date('2025-03-08').getTime() / 1000
 
 // chess.com result codes that mean the game was a draw
 const DRAW_RESULTS = [

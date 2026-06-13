@@ -6,9 +6,10 @@ const navLinks = [
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ]
+
+const pageLinks = [{ label: 'Blog', to: '/blog' }]
 
 const interests = [{ label: 'Chess', to: '/interests/chess' }]
 
@@ -26,11 +27,22 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
-                href={link.href}
+                href={`/${link.href}`}
                 className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
               >
                 {link.label}
               </a>
+            </li>
+          ))}
+
+          {pageLinks.map((link) => (
+            <li key={link.to}>
+              <Link
+                to={link.to}
+                className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+              >
+                {link.label}
+              </Link>
             </li>
           ))}
 
@@ -70,12 +82,23 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
-                href={link.href}
+                href={`/${link.href}`}
                 onClick={() => setIsOpen(false)}
                 className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {link.label}
               </a>
+            </li>
+          ))}
+          {pageLinks.map((link) => (
+            <li key={link.to}>
+              <Link
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                {link.label}
+              </Link>
             </li>
           ))}
           {interests.map((item) => (
