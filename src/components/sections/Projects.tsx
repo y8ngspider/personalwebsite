@@ -13,7 +13,7 @@ export default function Projects() {
       : projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section id="projects" className="py-20 border-b border-stone-200">
+    <section id="projects" className="border border-stone-200 bg-white/50 rounded-xl p-8 sm:p-10">
       <h2 className="text-xs font-semibold text-clay tracking-widest uppercase mb-8">
         Projects
       </h2>

@@ -3,7 +3,7 @@ import ethanPhoto from '../../assets/ethan.jpg'
 
 export default function Hero() {
   return (
-    <section id="hero" className="py-24 border-b border-stone-200">
+    <section id="hero" className="border border-stone-200 bg-white/50 rounded-xl p-8 sm:p-10">
       <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-10">
         <div>
           <p className="text-sm text-clay font-medium mb-3 tracking-wide uppercase">
@@ -65,7 +65,7 @@ export default function Hero() {
       </div>
       <div
         id="about"
-        className="max-w-2xl space-y-4 text-stone-600 leading-relaxed mt-16 scroll-mt-24"
+        className="max-w-2xl space-y-4 text-stone-600 leading-relaxed mt-10 scroll-mt-24"
       >
         <p>
           Hi, I'm Ethan. I'm a third-year stduent at Columbia studying Computer Science and Financial
