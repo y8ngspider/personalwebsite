@@ -23,12 +23,12 @@ export default function Navbar() {
           Ethan
         </a>
 
-        <ul className="hidden sm:flex items-center gap-6">
+        <ul className="hidden sm:flex items-center gap-1">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={`/${link.href}`}
-                className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+                className="text-sm text-gray-600 px-3 py-1.5 rounded-md hover:bg-gray-900 hover:text-white transition-colors"
               >
                 {link.label}
               </a>
@@ -39,7 +39,7 @@ export default function Navbar() {
             <li key={link.to}>
               <Link
                 to={link.to}
-                className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+                className="text-sm text-gray-600 px-3 py-1.5 rounded-md hover:bg-gray-900 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
@@ -47,7 +47,7 @@ export default function Navbar() {
           ))}
 
           <li className="relative group">
-            <button className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+            <button className="text-sm text-gray-600 px-3 py-1.5 rounded-md hover:bg-gray-900 hover:text-white transition-colors">
               Interests
             </button>
             {/* pt-2 bridges the gap so the menu stays open while moving the cursor into it */}

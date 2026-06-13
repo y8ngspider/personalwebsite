@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between gap-10">
         <div>
           <p className="text-sm text-gray-400 mb-3 tracking-wide uppercase">
-            CS + Financial Economics @ Columbia
+            CS & Financial Economics @ Columbia
           </p>
           <h1 className="text-5xl font-bold text-gray-900 tracking-tight mb-6">
             Ethan Yang
@@ -67,18 +67,17 @@ export default function Hero() {
         className="max-w-2xl space-y-4 text-gray-600 leading-relaxed mt-16 scroll-mt-24"
       >
         <p>
-          Hi, I'm Ethan. I'm a third-year at Columbia studying Computer Science and Financial
-          Economics, originally from Singapore. Before college, I served two years in the Singapore Armed Forces 
-          as a lieutenant, leading a platoon of around 40 soldiers. 
+          Hi, I'm Ethan. I'm a third-year stduent at Columbia studying Computer Science and Financial
+          Economics, originally from Singapore. 
         </p>
         <p>
-          I've worked across both technical and financial roles. I built Python
-          automation tools at a software company, interned at a boutique investment bank, and
-          most recently doing equity research at a hedge fund where I build financial models,
-          write investment memos, and automate parts of the workflow with Python/JS.
+          I've worked across both tech and finance roles. I built a Python webscraper at a software company, interned at a boutique investment bank, and
+          most recently did equity research at a hedge fund where I build financial models,
+          write investment memos, and automated parts of the workflow with Python/JS. Before college, I also completed two years of mandatory service in the Singapore Armed Forces 
+          as a lieutenant. 
         </p>
         <p>
-          I'm drawn to roles where technical ability and business judgment overlap. Outside of
+          I think I bring a broad range of experiences with my experiences in Finance, Tech and Military Leadership. Outside of
           work, I love watching Formula One, playing tennis, and I recently picked up chess (always down for a game!)
         </p>
       </div>
