@@ -2,7 +2,7 @@
 
 My personal website — built with React, TypeScript, and Tailwind CSS. It showcases my background, experience, projects, and writing.
 
-**Live site:** (https://ethanyangwj.vercel.app/)
+**Live site:** (https://ethanyangwj.com/)
 
 ## Stack
 
