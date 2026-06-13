@@ -7,15 +7,12 @@ export default function About() {
       <div className="max-w-2xl space-y-4 text-gray-600 leading-relaxed">
         <p>
           Hi, I'm Ethan. I'm a third-year at Columbia studying Computer Science and Financial
-          Economics, originally from Singapore.
+          Economics, originally from Singapore. Before college, I served two years in the Singapore Armed Forces 
+          as a lieutenant, leading a platoon of around 40 soldiers. 
         </p>
         <p>
-          Before college, I served two years in the Singapore Armed Forces as a lieutenant,
-          leading a platoon of around 40 soldiers. 
-        </p>
-        <p>
-          I've worked across both technical and financial roles - building Python
-          automation tools at a software company, interning at a boutique investment bank, and
+          I've worked across both technical and financial roles. I built Python
+          automation tools at a software company, interned at a boutique investment bank, and
           most recently doing equity research at a hedge fund where I build financial models,
           write investment memos, and automate parts of the workflow in Python.
         </p>
