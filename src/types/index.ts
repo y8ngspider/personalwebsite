@@ -13,10 +13,10 @@ export interface Experience {
   id: string
   role: string
   company: string
-  location: string
   startDate: string
   endDate: string
-  bullets: string[]
+  summary: string
+  tags: string[]
   type: 'Internship' | 'Research' | 'Military' | 'Leadership'
 }
 

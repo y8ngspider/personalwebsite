@@ -7,7 +7,7 @@ export default function Experience() {
       <h2 className="text-xs font-semibold text-gray-400 tracking-widest uppercase mb-8">
         Experience
       </h2>
-      <div>
+      <div className="relative border-l border-gray-200 ml-1">
         {experiences.map((exp) => (
           <ExperienceItem key={exp.id} experience={exp} />
         ))}

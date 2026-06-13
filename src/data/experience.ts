@@ -5,53 +5,44 @@ export const experiences: Experience[] = [
     id: 'white-manna',
     role: 'Software Engineer & Equity Research Intern',
     company: 'White Manna Capital Partners',
-    location: 'Oradell, NJ',
     startDate: 'Mar 2026',
     endDate: 'Present',
-    bullets: [
-      'Built a Python application to automate real-time equity price tracking for 25+ securities, integrating REST API data retrieval with structured data processing and Excel export via openpyxl',
-      'Designed modular data pipeline with scheduled API calls, error handling, and structured output to dashboards used by portfolio managers to monitor 1Y/5Y price ranges and flag trading opportunities',
-      'Built 3-statement and DCF models across 8+ public companies with bull/base/bear scenarios and produced investment memoranda across healthcare, pharma, and biotech to inform long/short positioning',
-    ],
+    summary:
+      'Equity research covering Healthcare, Live Sciences and Biotech. Automated internal workflows with Python & JavaScript.',
+    tags: ['JavaScript', 'Python', 'DCF & 3-Statement Modelling'],
     type: 'Internship',
   },
   {
     id: 'lxl-capital',
     role: 'Investment Banking Analyst Intern',
     company: 'LXL Capital',
-    location: 'New York, NY',
     startDate: 'Jul 2025',
     endDate: 'Oct 2025',
-    bullets: [
-      'Screened and analyzed 500+ energy startups by revenue growth, margins, and capital structure to prioritize advisory targets, strengthening the firm\'s deal origination pipeline and supporting $3M+ in deal flow',
-      'Developed EV sector primer analyzing financials of 5 startups and published 8 sector newsletters covering M&A and capital markets trends across EV and healthcare',
-    ],
+    summary:
+      'Screened EV charging startups for deal origination.',
+    tags: ['Financial Analysis', 'Valuation', 'Research'],
     type: 'Internship',
   },
   {
     id: 'hellotech',
     role: 'Software Engineer Intern',
     company: 'HelloTech',
-    location: 'Singapore',
     startDate: 'Jan 2022',
     endDate: 'Feb 2022',
-    bullets: [
-      'Built a Python Selenium automation tool on Linux/macOS to scrape live USD/SGD exchange rates from a dynamically rendered banking website at 60-second intervals, using headless Chrome with explicit waits and regex parsing',
-      'Implemented a secure SMTP email alert system with environment-variable credential handling to notify users when exchange rates exceeded thresholds, reducing manual data collection by 3+ hours per week',
-    ],
+    summary:
+      'Built tool to scrape live FX rates with an automated email alert system.',
+    tags: ['Python'],
     type: 'Internship',
   },
   {
     id: 'saf',
     role: 'Lieutenant, Infantry Officer',
     company: 'Singapore Armed Forces',
-    location: 'Singapore',
     startDate: 'Mar 2022',
     endDate: 'Jan 2024',
-    bullets: [
-      'Built a Python tool to automate duty scheduling in Excel, reducing planning time by 10+ hours per month',
-      'Led battalion-level events for 300+ soldiers as part of the Military Police Command',
-    ],
+    summary:
+      'Led a platoon of 40 soldiers as Platoon Commander of the Presidential Guards. Comissioned as 2nd Lieutenant in the 128th Infantry Officer Cadet Course.',
+    tags: ['Leadership', 'Fired guns & blew stuff up'],
     type: 'Military',
   },
 ]
