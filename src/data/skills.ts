@@ -15,6 +15,6 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: 'Finance',
-    skills: ['DCF Modeling', '3-Statement Modeling', 'Bloomberg Terminal', 'Capital IQ', 'FactSet', 'Investment Memos'],
+    skills: ['DCF Modeling', '3-Statement Modeling', 'Bloomberg Terminal', 'Capital IQ', 'FactSet'],
   },
 ]
