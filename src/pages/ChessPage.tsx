@@ -124,12 +124,12 @@ export default function ChessPage() {
 
   return (
     <main className="max-w-2xl mx-auto px-6 pt-32 pb-20">
-      <Link to="/" className="text-sm text-stone-400 hover:text-clay transition-colors">
+      <Link to="/" className="text-sm text-faint hover:text-clay transition-colors">
         ← Back home
       </Link>
 
       <h1 className="text-3xl font-semibold text-ink tracking-tight mt-6 mb-2">Chess</h1>
-      <p className="text-stone-500 mb-8">
+      <p className="text-muted mb-8">
         I picked up chess in sophomore year and have been playing on chess.com. See the live stats below.{' '}
         <a
           href={`https://www.chess.com/member/${CHESS_USERNAME}`}
@@ -141,7 +141,7 @@ export default function ChessPage() {
         </a>
       </p>
 
-      {loading && <p className="text-sm text-stone-400">Loading chess stats…</p>}
+      {loading && <p className="text-sm text-faint">Loading chess stats…</p>}
 
       {error && (
         <p className="text-sm text-red-500">
@@ -152,12 +152,12 @@ export default function ChessPage() {
       {!loading && !error && (
         <>
           {stats && (
-            <div className="border border-stone-200 rounded-lg p-5 mb-8 bg-white/40">
+            <div className="border border-line rounded-lg p-5 mb-8 bg-surface">
               <p className="text-xs text-clay uppercase tracking-widest mb-1">
                 Rapid Rating
               </p>
               <p className="text-4xl font-semibold text-ink mb-3">{stats.rating}</p>
-              <p className="text-sm text-stone-500">
+              <p className="text-sm text-muted">
                 {stats.win}W · {stats.loss}L · {stats.draw}D
               </p>
             </div>
@@ -166,7 +166,7 @@ export default function ChessPage() {
           <h2 className="text-xs font-semibold text-clay tracking-widest uppercase mb-4">
             Rapid Rating Over Time
           </h2>
-          <div className="border border-stone-200 rounded-lg p-4 mb-8 bg-white/40">
+          <div className="border border-line rounded-lg p-4 mb-8 bg-surface">
             <ChessRatingChart data={history} />
           </div>
 
@@ -174,7 +174,7 @@ export default function ChessPage() {
             Recent Games
           </h2>
           {recentGames.length === 0 ? (
-            <p className="text-sm text-stone-400">No recent games found.</p>
+            <p className="text-sm text-faint">No recent games found.</p>
           ) : (
             <ul className="space-y-2">
               {recentGames.map((game) => (
@@ -183,7 +183,7 @@ export default function ChessPage() {
                     href={game.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between border border-stone-200 rounded-lg px-4 py-3 bg-white/40 hover:border-clay/50 transition-colors"
+                    className="flex items-center justify-between border border-line rounded-lg px-4 py-3 bg-surface hover:border-clay/50 transition-colors"
                   >
                     <div className="flex items-center gap-3">
                       <span
@@ -192,16 +192,16 @@ export default function ChessPage() {
                             ? 'text-xs font-semibold w-12 text-emerald-600'
                             : game.result === 'Loss'
                               ? 'text-xs font-semibold w-12 text-red-500'
-                              : 'text-xs font-semibold w-12 text-stone-400'
+                              : 'text-xs font-semibold w-12 text-faint'
                         }
                       >
                         {game.result}
                       </span>
-                      <span className="text-sm text-stone-700">
+                      <span className="text-sm text-ink">
                         vs {game.opponent} ({game.opponentRating})
                       </span>
                     </div>
-                    <span className="text-xs text-stone-400">{game.date}</span>
+                    <span className="text-xs text-faint">{game.date}</span>
                   </a>
                 </li>
               ))}

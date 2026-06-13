@@ -4,13 +4,40 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ethan Yang — CS & Financial Economics @ Columbia</title>
+    <meta
+      name="description"
+      content="Ethan Yang — Columbia student studying Computer Science and Financial Economics. Software engineering, finance, and the tools in between."
+    />
+
+    <!-- Open Graph (link previews on LinkedIn, iMessage, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ethan Yang" />
+    <meta
+      property="og:description"
+      content="CS & Financial Economics @ Columbia. Software engineering, finance, and the tools in between."
+    />
+    <meta property="og:url" content="https://ethanyangwj.vercel.app/" />
+    <meta name="twitter:card" content="summary" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Ethan Yang</title>
+
+    <!-- Apply saved theme before paint to avoid a flash of the wrong theme -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem('theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

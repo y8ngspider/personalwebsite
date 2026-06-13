@@ -1,13 +1,33 @@
 @import "tailwindcss";
 
-/* Design tokens — change a value here and it updates everywhere */
+/* Enable class-based dark mode: <html class="dark"> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design tokens — utilities like bg-surface / text-muted reference these.
+   Override them under .dark and the whole site re-themes automatically. */
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Fraunces', ui-serif, Georgia, serif;
 
-  --color-cream: #faf8f5;
-  --color-ink: #1c1917;
-  --color-clay: #b45309;
+  --color-cream: #faf8f5;   /* page background */
+  --color-surface: #fffdfb; /* card background */
+  --color-line: #e7e4df;    /* borders */
+  --color-ink: #1c1917;     /* headings / strong text */
+  --color-muted: #57534e;   /* body text */
+  --color-faint: #a8a29e;   /* secondary text */
+  --color-chip: #f1eee9;    /* tag background */
+  --color-clay: #b45309;    /* accent */
+}
+
+.dark {
+  --color-cream: #181613;
+  --color-surface: #211e19;
+  --color-line: #353029;
+  --color-ink: #f5f1ea;
+  --color-muted: #b8b0a4;
+  --color-faint: #847b6f;
+  --color-chip: #2a251f;
+  --color-clay: #e08a3c;
 }
 
 html {
@@ -20,7 +40,9 @@ section {
 
 body {
   background-color: var(--color-cream);
+  color: var(--color-muted);
   font-family: var(--font-sans);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Headline-level elements use the serif; small uppercase labels stay sans */

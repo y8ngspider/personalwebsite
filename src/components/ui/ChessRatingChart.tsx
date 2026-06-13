@@ -19,7 +19,7 @@ export default function ChessRatingChart({ data }: Props) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null)
 
   if (data.length < 2) {
-    return <p className="text-sm text-gray-400">Not enough rated rapid games to chart yet.</p>
+    return <p className="text-sm text-faint">Not enough rated rapid games to chart yet.</p>
   }
 
   const ratings = data.map((d) => d.rating)
@@ -62,23 +62,23 @@ export default function ChessRatingChart({ data }: Props) {
       onMouseLeave={() => setHoverIndex(null)}
     >
       {/* y-axis reference labels */}
-      <text x={PADDING.left - 8} y={yFor(maxRating) + 4} textAnchor="end" fontSize="11" fill="#a8a29e">
+      <text x={PADDING.left - 8} y={yFor(maxRating) + 4} textAnchor="end" fontSize="11" fill="var(--color-faint)">
         {maxRating}
       </text>
-      <text x={PADDING.left - 8} y={yFor(minRating) + 4} textAnchor="end" fontSize="11" fill="#a8a29e">
+      <text x={PADDING.left - 8} y={yFor(minRating) + 4} textAnchor="end" fontSize="11" fill="var(--color-faint)">
         {minRating}
       </text>
 
       {/* x-axis: first and last date */}
-      <text x={PADDING.left} y={HEIGHT - 8} textAnchor="start" fontSize="11" fill="#a8a29e">
+      <text x={PADDING.left} y={HEIGHT - 8} textAnchor="start" fontSize="11" fill="var(--color-faint)">
         {data[0].date}
       </text>
-      <text x={WIDTH - PADDING.right} y={HEIGHT - 8} textAnchor="end" fontSize="11" fill="#a8a29e">
+      <text x={WIDTH - PADDING.right} y={HEIGHT - 8} textAnchor="end" fontSize="11" fill="var(--color-faint)">
         {data[data.length - 1].date}
       </text>
 
       {/* the rating line */}
-      <path d={linePath} fill="none" stroke="#b45309" strokeWidth={2} />
+      <path d={linePath} fill="none" stroke="var(--color-clay)" strokeWidth={2} />
 
       {/* hover guide line, circle, and label */}
       {active && hoverIndex !== null && (
@@ -88,14 +88,14 @@ export default function ChessRatingChart({ data }: Props) {
             y1={PADDING.top}
             x2={xFor(hoverIndex)}
             y2={PADDING.top + innerH}
-            stroke="#d6d3d1"
+            stroke="var(--color-line)"
             strokeDasharray="3 3"
           />
-          <circle cx={xFor(hoverIndex)} cy={yFor(active.rating)} r={5} fill="#b45309" />
-          <text x={labelX} y={20} textAnchor="middle" fontSize="13" fontWeight="600" fill="#1c1917">
+          <circle cx={xFor(hoverIndex)} cy={yFor(active.rating)} r={5} fill="var(--color-clay)" />
+          <text x={labelX} y={20} textAnchor="middle" fontSize="13" fontWeight="600" fill="var(--color-ink)">
             {active.rating}
           </text>
-          <text x={labelX} y={36} textAnchor="middle" fontSize="11" fill="#9ca3af">
+          <text x={labelX} y={36} textAnchor="middle" fontSize="11" fill="var(--color-faint)">
             {active.date}
           </text>
         </>

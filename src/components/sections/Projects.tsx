@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="border border-stone-200 bg-white/50 rounded-xl p-8 sm:p-10 scroll-mt-24"
+      className="border border-line bg-surface rounded-xl p-8 sm:p-10 scroll-mt-24"
     >
       <div className="grid gap-6 sm:grid-cols-[140px_1fr] sm:gap-10">
         <h2 className="text-xs font-semibold text-clay tracking-widest uppercase sm:pt-1">
@@ -31,7 +31,7 @@ export default function Projects() {
                 className={
                   activeCategory === category
                     ? 'px-3 py-1.5 text-sm rounded-md bg-clay text-cream'
-                    : 'px-3 py-1.5 text-sm rounded-md border border-stone-300 text-stone-600 hover:border-clay hover:text-clay transition-colors'
+                    : 'px-3 py-1.5 text-sm rounded-md border border-line text-muted hover:border-clay hover:text-clay transition-colors'
                 }
               >
                 {category}

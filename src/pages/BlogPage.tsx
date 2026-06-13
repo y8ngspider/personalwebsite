@@ -5,7 +5,7 @@ import BlogCard from '../components/ui/BlogCard'
 export default function BlogPage() {
   return (
     <main className="max-w-2xl mx-auto px-6 pt-32 pb-20">
-      <Link to="/" className="text-sm text-stone-400 hover:text-clay transition-colors">
+      <Link to="/" className="text-sm text-faint hover:text-clay transition-colors">
         ← Back home
       </Link>
 
