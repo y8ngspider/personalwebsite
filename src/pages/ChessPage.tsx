@@ -124,24 +124,24 @@ export default function ChessPage() {
 
   return (
     <main className="max-w-2xl mx-auto px-6 pt-32 pb-20">
-      <Link to="/" className="text-sm text-gray-400 hover:text-gray-900 transition-colors">
+      <Link to="/" className="text-sm text-stone-400 hover:text-clay transition-colors">
         ← Back home
       </Link>
 
-      <h1 className="text-3xl font-bold text-gray-900 tracking-tight mt-6 mb-2">Chess</h1>
-      <p className="text-gray-500 mb-8">
+      <h1 className="text-3xl font-semibold text-ink tracking-tight mt-6 mb-2">Chess</h1>
+      <p className="text-stone-500 mb-8">
         I picked up chess recently and have been playing on chess.com. Live stats below.{' '}
         <a
           href={`https://www.chess.com/member/${CHESS_USERNAME}`}
           target="_blank"
           rel="noreferrer"
-          className="text-gray-700 underline hover:text-gray-900"
+          className="text-clay underline hover:text-ink"
         >
           View my profile →
         </a>
       </p>
 
-      {loading && <p className="text-sm text-gray-400">Loading chess stats…</p>}
+      {loading && <p className="text-sm text-stone-400">Loading chess stats…</p>}
 
       {error && (
         <p className="text-sm text-red-500">
@@ -152,29 +152,29 @@ export default function ChessPage() {
       {!loading && !error && (
         <>
           {stats && (
-            <div className="border border-gray-200 rounded-lg p-5 mb-8">
-              <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">
+            <div className="border border-stone-200 rounded-lg p-5 mb-8 bg-white/40">
+              <p className="text-xs text-clay uppercase tracking-widest mb-1">
                 Rapid Rating
               </p>
-              <p className="text-4xl font-bold text-gray-900 mb-3">{stats.rating}</p>
-              <p className="text-sm text-gray-500">
+              <p className="text-4xl font-semibold text-ink mb-3">{stats.rating}</p>
+              <p className="text-sm text-stone-500">
                 {stats.win}W · {stats.loss}L · {stats.draw}D
               </p>
             </div>
           )}
 
-          <h2 className="text-xs font-semibold text-gray-400 tracking-widest uppercase mb-4">
+          <h2 className="text-xs font-semibold text-clay tracking-widest uppercase mb-4">
             Rapid Rating Over Time
           </h2>
-          <div className="border border-gray-200 rounded-lg p-4 mb-8">
+          <div className="border border-stone-200 rounded-lg p-4 mb-8 bg-white/40">
             <ChessRatingChart data={history} />
           </div>
 
-          <h2 className="text-xs font-semibold text-gray-400 tracking-widest uppercase mb-4">
+          <h2 className="text-xs font-semibold text-clay tracking-widest uppercase mb-4">
             Recent Games
           </h2>
           {recentGames.length === 0 ? (
-            <p className="text-sm text-gray-400">No recent games found.</p>
+            <p className="text-sm text-stone-400">No recent games found.</p>
           ) : (
             <ul className="space-y-2">
               {recentGames.map((game) => (
@@ -183,25 +183,25 @@ export default function ChessPage() {
                     href={game.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center justify-between border border-gray-200 rounded-lg px-4 py-3 hover:border-gray-400 transition-colors"
+                    className="flex items-center justify-between border border-stone-200 rounded-lg px-4 py-3 bg-white/40 hover:border-clay/50 transition-colors"
                   >
                     <div className="flex items-center gap-3">
                       <span
                         className={
                           game.result === 'Win'
-                            ? 'text-xs font-semibold w-12 text-green-600'
+                            ? 'text-xs font-semibold w-12 text-emerald-600'
                             : game.result === 'Loss'
                               ? 'text-xs font-semibold w-12 text-red-500'
-                              : 'text-xs font-semibold w-12 text-gray-400'
+                              : 'text-xs font-semibold w-12 text-stone-400'
                         }
                       >
                         {game.result}
                       </span>
-                      <span className="text-sm text-gray-700">
+                      <span className="text-sm text-stone-700">
                         vs {game.opponent} ({game.opponentRating})
                       </span>
                     </div>
-                    <span className="text-xs text-gray-400">{game.date}</span>
+                    <span className="text-xs text-stone-400">{game.date}</span>
                   </a>
                 </li>
               ))}

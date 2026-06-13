@@ -13,8 +13,8 @@ export default function Projects() {
       : projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section id="projects" className="py-20 border-b border-gray-100">
-      <h2 className="text-xs font-semibold text-gray-400 tracking-widest uppercase mb-8">
+    <section id="projects" className="py-20 border-b border-stone-200">
+      <h2 className="text-xs font-semibold text-clay tracking-widest uppercase mb-8">
         Projects
       </h2>
 
@@ -25,8 +25,8 @@ export default function Projects() {
             onClick={() => setActiveCategory(category)}
             className={
               activeCategory === category
-                ? 'px-3 py-1.5 text-sm rounded-md bg-gray-900 text-white'
-                : 'px-3 py-1.5 text-sm rounded-md border border-gray-300 text-gray-600 hover:border-gray-500 transition-colors'
+                ? 'px-3 py-1.5 text-sm rounded-md bg-clay text-cream'
+                : 'px-3 py-1.5 text-sm rounded-md border border-stone-300 text-stone-600 hover:border-clay hover:text-clay transition-colors'
             }
           >
             {category}

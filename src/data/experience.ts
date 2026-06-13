@@ -9,7 +9,7 @@ export const experiences: Experience[] = [
     endDate: 'Present',
     summary:
       'Equity research covering Healthcare, Live Sciences and Biotech. Automated internal workflows with Python & JavaScript.',
-    tags: ['JavaScript', 'Python', 'DCF & 3-Statement Modelling'],
+    tags: ['JavaScript', 'Python', '3-Statement Modelling', 'Discounted Cash Flow Analysis'],
     type: 'Internship',
   },
   {
@@ -19,8 +19,8 @@ export const experiences: Experience[] = [
     startDate: 'Jul 2025',
     endDate: 'Oct 2025',
     summary:
-      'Screened EV charging startups for deal origination.',
-    tags: ['Financial Analysis', 'Valuation', 'Research'],
+      'Assisted senior bankers in preparing client-facing material and industry research.',
+    tags: ['Financial Analysis', 'Valuation', 'Research', 'Microsoft Powerpoint'],
     type: 'Internship',
   },
   {

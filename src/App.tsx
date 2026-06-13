@@ -8,7 +8,7 @@ import ChessPage from './pages/ChessPage'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen text-stone-600">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

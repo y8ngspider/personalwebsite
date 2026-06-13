@@ -8,9 +8,9 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <main className="max-w-2xl mx-auto px-6 pt-32 pb-20 text-center">
-        <h1 className="text-2xl font-bold text-gray-900 mb-4">Post not found</h1>
-        <Link to="/" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-          ← Back home
+        <h1 className="text-2xl font-semibold text-ink mb-4">Post not found</h1>
+        <Link to="/blog" className="text-sm text-stone-500 hover:text-clay transition-colors">
+          ← Back to writing
         </Link>
       </main>
     )
@@ -19,20 +19,20 @@ export default function BlogPostPage() {
   return (
     <main className="max-w-2xl mx-auto px-6 pt-32 pb-20">
       <Link
-        to="/#blog"
-        className="text-sm text-gray-400 hover:text-gray-900 transition-colors"
+        to="/blog"
+        className="text-sm text-stone-400 hover:text-clay transition-colors"
       >
         ← Back to writing
       </Link>
 
-      <h1 className="text-3xl font-bold text-gray-900 tracking-tight mt-6 mb-2">
+      <h1 className="text-3xl font-semibold text-ink tracking-tight mt-6 mb-2">
         {post.title}
       </h1>
-      <p className="text-sm text-gray-400 mb-8">{post.date}</p>
+      <p className="text-sm text-stone-400 mb-8">{post.date}</p>
 
       <div className="space-y-4">
         {post.content.map((paragraph, index) => (
-          <p key={index} className="text-gray-600 leading-relaxed">
+          <p key={index} className="text-stone-600 leading-relaxed">
             {paragraph}
           </p>
         ))}
@@ -40,7 +40,7 @@ export default function BlogPostPage() {
 
       <div className="flex flex-wrap gap-1.5 mt-8">
         {post.tags.map((tag) => (
-          <span key={tag} className="text-xs text-gray-500 bg-gray-100 rounded px-2 py-0.5">
+          <span key={tag} className="text-xs text-stone-500 bg-stone-100 rounded px-2 py-0.5">
             {tag}
           </span>
         ))}

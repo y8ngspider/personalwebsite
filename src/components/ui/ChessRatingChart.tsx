@@ -62,23 +62,23 @@ export default function ChessRatingChart({ data }: Props) {
       onMouseLeave={() => setHoverIndex(null)}
     >
       {/* y-axis reference labels */}
-      <text x={PADDING.left - 8} y={yFor(maxRating) + 4} textAnchor="end" fontSize="11" fill="#9ca3af">
+      <text x={PADDING.left - 8} y={yFor(maxRating) + 4} textAnchor="end" fontSize="11" fill="#a8a29e">
         {maxRating}
       </text>
-      <text x={PADDING.left - 8} y={yFor(minRating) + 4} textAnchor="end" fontSize="11" fill="#9ca3af">
+      <text x={PADDING.left - 8} y={yFor(minRating) + 4} textAnchor="end" fontSize="11" fill="#a8a29e">
         {minRating}
       </text>
 
       {/* x-axis: first and last date */}
-      <text x={PADDING.left} y={HEIGHT - 8} textAnchor="start" fontSize="11" fill="#9ca3af">
+      <text x={PADDING.left} y={HEIGHT - 8} textAnchor="start" fontSize="11" fill="#a8a29e">
         {data[0].date}
       </text>
-      <text x={WIDTH - PADDING.right} y={HEIGHT - 8} textAnchor="end" fontSize="11" fill="#9ca3af">
+      <text x={WIDTH - PADDING.right} y={HEIGHT - 8} textAnchor="end" fontSize="11" fill="#a8a29e">
         {data[data.length - 1].date}
       </text>
 
       {/* the rating line */}
-      <path d={linePath} fill="none" stroke="#111827" strokeWidth={2} />
+      <path d={linePath} fill="none" stroke="#b45309" strokeWidth={2} />
 
       {/* hover guide line, circle, and label */}
       {active && hoverIndex !== null && (
@@ -88,11 +88,11 @@ export default function ChessRatingChart({ data }: Props) {
             y1={PADDING.top}
             x2={xFor(hoverIndex)}
             y2={PADDING.top + innerH}
-            stroke="#d1d5db"
+            stroke="#d6d3d1"
             strokeDasharray="3 3"
           />
-          <circle cx={xFor(hoverIndex)} cy={yFor(active.rating)} r={5} fill="#111827" />
-          <text x={labelX} y={20} textAnchor="middle" fontSize="13" fontWeight="600" fill="#111827">
+          <circle cx={xFor(hoverIndex)} cy={yFor(active.rating)} r={5} fill="#b45309" />
+          <text x={labelX} y={20} textAnchor="middle" fontSize="13" fontWeight="600" fill="#1c1917">
             {active.rating}
           </text>
           <text x={labelX} y={36} textAnchor="middle" fontSize="11" fill="#9ca3af">
