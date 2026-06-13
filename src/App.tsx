@@ -3,6 +3,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Home from './pages/Home'
 import BlogPostPage from './pages/BlogPostPage'
+import ChessPage from './pages/ChessPage'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
+        <Route path="/interests/chess" element={<ChessPage />} />
       </Routes>
       <Footer />
     </div>

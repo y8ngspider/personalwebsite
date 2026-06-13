@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -9,17 +10,19 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
+const interests = [{ label: 'Chess', to: '/interests/chess' }]
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
       <div className="max-w-4xl mx-auto px-6 flex items-center justify-between h-14">
-        <a href="#" className="font-semibold text-gray-900 tracking-tight">
+        <a href="/" className="font-semibold text-gray-900 tracking-tight">
           Ethan
         </a>
 
-        <ul className="hidden sm:flex gap-6">
+        <ul className="hidden sm:flex items-center gap-6">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -30,6 +33,27 @@ export default function Navbar() {
               </a>
             </li>
           ))}
+
+          <li className="relative group">
+            <button className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+              Interests
+            </button>
+            {/* pt-2 bridges the gap so the menu stays open while moving the cursor into it */}
+            <div className="absolute right-0 top-full pt-2 hidden group-hover:block">
+              <ul className="bg-white border border-gray-100 rounded-md shadow-sm py-1 min-w-32">
+                {interests.map((item) => (
+                  <li key={item.to}>
+                    <Link
+                      to={item.to}
+                      className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </li>
         </ul>
 
         <button
@@ -52,6 +76,17 @@ export default function Navbar() {
               >
                 {link.label}
               </a>
+            </li>
+          ))}
+          {interests.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                onClick={() => setIsOpen(false)}
+                className="block text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                {item.label}
+              </Link>
             </li>
           ))}
         </ul>
