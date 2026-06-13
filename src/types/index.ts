@@ -30,5 +30,6 @@ export interface BlogPost {
   title: string
   date: string
   description: string
+  content: string[]
   tags: string[]
 }
